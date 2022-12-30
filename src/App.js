@@ -1,25 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import card from "./componentes/card"
 
 function App() {
   const title = "Bienvenidos a nuestro E-comerce";
-  const title2 = "Catalogo";
-  const producto = {
-    precio: 500,
-    nombre: "Miel",
-    Descripcion: "100 % pura",
-  };
+  const title2 = "Catalogo"
+  
 
-  const cardproducto = (
-    <div>
-      <h3>{producto.nombre}</h3>
-      <br></br>
-      <h3>{producto.precio}</h3>
-    </div>
-  );
-  function comprado(){
+
+  function comprado() {
     alert("Usted ha adquirido el producto")
-  }
+  };
 
   const miEstilo = {
     backgroundColor: "orange",
@@ -29,26 +20,19 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          {title}
-          <br></br>
-          {title2}
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          
-        </a>
-        {cardproducto}
-      </header>
-      <div style={miEstilo} className='catalogo'>{cardproducto}</div>
+    <div>
+      <div className="App">
+        <header className="App-header">
+            <img src={logo} className="App-logo" alt="logo" />
+            {title}
+            <br></br>
+            {title2}
+            <card />
+        </header>
+      <div/>
+      <div style={miEstilo} className='catalogo'></div>
       <button onClick={comprado}>COMPRAR</button>
+      </div>
     </div>
   );
 }

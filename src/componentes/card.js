@@ -7,13 +7,16 @@ function card() {
       };
 
 
-    return( <div>
-    <h3>{producto.nombre}</h3>
-    <br></br>
-    <h3>{producto.precio}</h3>
-    <small>{pproducto.descripcion}</small>
-    <button>click me</button>
-  </div>
+    return(
+    <>  
+        <div>
+           <h3>{producto.nombre}</h3>
+           <br></br>
+           <h3>{producto.precio}</h3>
+           <small>{producto.Descripcion}</small>
+           <button>click me</button>
+        </div>
+    </> 
     );
 }
 
