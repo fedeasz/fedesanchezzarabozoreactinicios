@@ -1,10 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
-import card from "./componentes/card"
+import Card from "./componentes/Card"
 
 function App() {
   const title = "Bienvenidos a nuestro E-comerce";
   const title2 = "Catalogo"
+  
+  
+  const producto = {
+    precio: 500,
+    nombre: "Miel",
+    Descripcion: "100 % pura",
+  };
   
 
 
@@ -27,10 +34,11 @@ function App() {
             {title}
             <br></br>
             {title2}
-            <card />
+            <Card />
         </header>
       <div/>
-      <div style={miEstilo} className='catalogo'></div>
+      <div style={miEstilo} className='catalogo'><Card />
+      </div>
       <button onClick={comprado}>COMPRAR</button>
       </div>
     </div>

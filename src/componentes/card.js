@@ -1,4 +1,4 @@
-function card() {
+function Card() {
 
     const producto = {
         precio: 500,
@@ -8,7 +8,7 @@ function card() {
 
 
     return(
-    <>  
+  
         <div>
            <h3>{producto.nombre}</h3>
            <br></br>
@@ -16,8 +16,8 @@ function card() {
            <small>{producto.Descripcion}</small>
            <button>click me</button>
         </div>
-    </> 
+ 
     );
 }
 
-export default card;
+export default Card;
