@@ -1,17 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-import Card from "./componentes/Card"
+import Card from "./componentes/Card";
+import Botones from './componentes/Botones/Botones';
+import NavBar from './componentes/Navbar/NavBar';
 
 function App() {
   const title = "Bienvenidos a nuestro E-comerce";
   const title2 = "Catalogo"
   
   
-  const producto = {
-    precio: 500,
-    nombre: "Miel",
-    Descripcion: "100 % pura",
-  };
+
   
 
 
@@ -30,16 +28,20 @@ function App() {
     <div>
       <div className="App">
         <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
+            {/*<img src={logo} className="App-logo" alt="logo" />*/}
             {title}
             <br></br>
             {title2}
-            <Card />
+            <NavBar/>
         </header>
       <div/>
-      <div style={miEstilo} className='catalogo'><Card />
+      <div style={miEstilo} className='catalogo'>
+            <Card img="./imagenes/i1.PNG" Nombre="MIEL 100% PURA" precio="500" detail="organica" />
+            <Card img="./imagenes/i2.jpg"Nombre="JALEA" precio={700} detail="organica" />
+            <Card img="./imagenes/propoleo.jpg" Nombre="PROPOLEO" precio="500" detail="organica" />
       </div>
       <button onClick={comprado}>COMPRAR</button>
+      <Botones />
       </div>
     </div>
   );

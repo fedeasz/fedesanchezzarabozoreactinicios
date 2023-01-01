@@ -1,20 +1,19 @@
-function Card() {
+import Botones from "./Botones/Botones";
 
-    const producto = {
-        precio: 500,
-        nombre: "Miel",
-        Descripcion: "100 % pura",
-      };
+function Card(props) {
+
 
 
     return(
   
         <div>
-           <h3>{producto.nombre}</h3>
+           <h3>{props.Nombre}</h3>
            <br></br>
-           <h3>{producto.precio}</h3>
-           <small>{producto.Descripcion}</small>
-           <button>click me</button>
+           <img height="220px" src={props.img} alt={props.Nombre}/>
+           <h3>{props.precio}</h3>
+           <small>{props.detail}</small>
+           <br></br>
+           <Botones />
         </div>
  
     );
