@@ -3,7 +3,7 @@ import './App.css';
 import Card from "./componentes/Card";
 import Botones from './componentes/Botones/Botones';
 import NavBar from './componentes/Navbar/NavBar';
-import ItemsGreeting from './componentes/Itemlistcontainer/ItemsGreeting';
+import Saludo from './componentes/Itemlistcontainer/ItemsGreeting';
 
 
 function App() {
@@ -36,7 +36,7 @@ function App() {
             <br></br>
             {title2}
             <NavBar/>
-            <ItemsGreeting />
+            <Saludo />
             <Card />
         </header>
       <div/>

@@ -1,9 +1,9 @@
-function ItemsGreeting (props){
+function Saludo (props){
 
 
 return(
     <div>
-    <h1>Bienvenido a nuesto E-commerce Oficial!</h1>
+    <h1>¡¡Bienvenido a nuesto E-commerce Oficial!!</h1>
     </div>
 );
 
@@ -12,4 +12,4 @@ return(
 
 
 
-export default ItemsGreeting;
+export default Saludo;
