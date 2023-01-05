@@ -1,6 +1,6 @@
 import Botones from "./Botones/Botones";
 
-function Card(props) {
+function Card (props) {
 
 
 

@@ -3,8 +3,11 @@ import './App.css';
 import Card from "./componentes/Card";
 import Botones from './componentes/Botones/Botones';
 import NavBar from './componentes/Navbar/NavBar';
+import ItemsGreeting from './componentes/Itemlistcontainer/ItemsGreeting';
+
 
 function App() {
+  
   const title = "Bienvenidos a nuestro E-comerce";
   const title2 = "Catalogo"
   
@@ -33,15 +36,18 @@ function App() {
             <br></br>
             {title2}
             <NavBar/>
+            <ItemsGreeting />
+            <Card />
         </header>
       <div/>
       <div style={miEstilo} className='catalogo'>
             <Card img="./imagenes/i1.PNG" Nombre="MIEL 100% PURA" precio="500" detail="organica" />
             <Card img="./imagenes/i2.jpg"Nombre="JALEA" precio={700} detail="organica" />
             <Card img="./imagenes/propoleo.jpg" Nombre="PROPOLEO" precio="500" detail="organica" />
+            <Botones />
       </div>
-      <button onClick={comprado}>COMPRAR</button>
-      <Botones />
+      
+      <button onClick={comprado}>FINALIZAR COMPRAR</button>
       </div>
     </div>
   );
