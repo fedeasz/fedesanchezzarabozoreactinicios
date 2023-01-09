@@ -4,6 +4,7 @@ import Card from "./componentes/Card";
 import Botones from './componentes/Botones/Botones';
 import NavBar from './componentes/Navbar/NavBar';
 import Saludo from './componentes/Itemlistcontainer/ItemsGreeting';
+import Flex from './componentes/Flex/Flex';
 
 
 function App() {
@@ -40,12 +41,12 @@ function App() {
             <Card />
         </header>
       <div/>
-      <div style={miEstilo} className='catalogo'>
+      <Flex>
             <Card img="./imagenes/i1.PNG" Nombre="MIEL 100% PURA" precio="500" detail="organica" />
             <Card img="./imagenes/i2.jpg"Nombre="JALEA" precio={700} detail="organica" />
             <Card img="./imagenes/propoleo.jpg" Nombre="PROPOLEO" precio="500" detail="organica" />
             <Botones />
-      </div>
+      </Flex>
       
       <button onClick={comprado}>FINALIZAR COMPRAR</button>
       </div>
