@@ -41,16 +41,16 @@ function App() {
             <Card />
         </header>
       <div/>
+    </div>
       <Flex>
             <Card img="./imagenes/i1.PNG" Nombre="MIEL 100% PURA" precio="500" detail="organica" />
             <Card img="./imagenes/i2.jpg"Nombre="JALEA" precio={700} detail="organica" />
             <Card img="./imagenes/propoleo.jpg" Nombre="PROPOLEO" precio="500" detail="organica" />
-            <Botones />
       </Flex>
       
       <button onClick={comprado}>FINALIZAR COMPRAR</button>
-      </div>
-    </div>
+  </div>
+    
   );
 }
 

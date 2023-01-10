@@ -1,4 +1,7 @@
 .flexContainer{
+    margin:10 auto;
+    max-width: 1200px;
+    justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
     background-color: aliceblue;
