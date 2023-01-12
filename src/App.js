@@ -38,7 +38,7 @@ function App() {
             {title}
             <br></br>
             {title2}
-            <Card ItemCount stock={150}/>
+            <Card />
         </header>
       <div/>
     </div>
