@@ -1,4 +1,4 @@
-const After =(props) =>  (
+/*const After =(props) =>  (
 <li>
     <a href="/">{props.text}</a>
 </li>

@@ -1,9 +1,11 @@
+
 import Botones from "./Botones/Botones";
 
 function Card (props) {
+    
+      
 
-
-
+    
     return(
   
         <div>
@@ -13,7 +15,7 @@ function Card (props) {
            <h3>{props.precio}</h3>
            <small>{props.detail}</small>
            <br></br>
-           <Botones />
+           <Botones padding = "8px 12px" color="Green"/>
         </div>
  
     );

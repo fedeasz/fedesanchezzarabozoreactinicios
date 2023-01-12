@@ -3,8 +3,10 @@ import './App.css';
 import Card from "./componentes/Card";
 import Botones from './componentes/Botones/Botones';
 import NavBar from './componentes/Navbar/NavBar';
-import Saludo from './componentes/Itemlistcontainer/ItemsGreeting';
+/*import Saludo from './componentes/Itemlistcontainer/ItemsGreeting';*/
 import Flex from './componentes/Flex/Flex';
+import ItemCount from './componentes/contador/ItemCount';
+import ItemsListContainer from './componentes/ItemsListContainer/ItemsListContainer';
 
 
 function App() {
@@ -31,23 +33,19 @@ function App() {
   return (
     <div>
       <div className="App">
-        <header className="App-header">
-            {/*<img src={logo} className="App-logo" alt="logo" />*/}
+        <header className="App-header" >
+            <NavBar/>
             {title}
             <br></br>
             {title2}
-            <NavBar/>
-            <Saludo />
-            <Card />
+            <Card ItemCount stock={150}/>
         </header>
       <div/>
     </div>
-      <Flex>
-            <Card img="./imagenes/i1.PNG" Nombre="MIEL 100% PURA" precio="500" detail="organica" />
-            <Card img="./imagenes/i2.jpg"Nombre="JALEA" precio={700} detail="organica" />
-            <Card img="./imagenes/propoleo.jpg" Nombre="PROPOLEO" precio="500" detail="organica" />
-      </Flex>
-      
+      <ItemsListContainer/>
+      <Botones/>
+      <ItemCount stock={150}/> 
+      <button>Agregar al Carrito</button>   
       <button onClick={comprado}>FINALIZAR COMPRAR</button>
   </div>
     

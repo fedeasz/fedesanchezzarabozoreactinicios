@@ -1,7 +1,8 @@
+import "./Nav.css";
 function NavBar(props){
     return(
-       <header> 
-        <nav>
+       <header > 
+        <nav className= "Nav">
             <ul>
                 <li>
                 <a href="/" />
@@ -15,7 +16,7 @@ function NavBar(props){
                 </li>
             </ul>
             <cartWidget></cartWidget>
-            <span>Carrto</span>
+            <span>Carrito</span>
         </nav>
        </header> 
     )
