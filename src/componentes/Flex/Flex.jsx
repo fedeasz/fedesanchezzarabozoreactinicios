@@ -1,7 +1,7 @@
 import "./Flex.css";
 function Flex (props){
     return(
-    <div className="flexContainer">
+    <div className="FlexContainer">
         {props.children}
     </div>)
 
