@@ -2,12 +2,6 @@ import React from "react";
 import "./Botones.css";
 
 
-
-
-
-
-
-
 function Botones (props){
 
     //React.useState()
@@ -24,10 +18,12 @@ function Botones (props){
     }
 
     return(
-        <button onClick= {handleClick} styleButton={styleButton} className ="btn">{props.children}COMPRAR</button>
+        <button onClick= {handleClick} styleButton={styleButton} className ="btn">{props.children}AÑADIR AL CARRITO</button>
     );
 
 }
+
+    
 
 
 export default Botones;

@@ -6,3 +6,14 @@
     min-height: 100px;
     max-width: 1530px;
 }
+.botonfin{
+  width: 100%;
+  height: 45px;
+  cursor: pointer;
+  background-color: orangered;
+  font-weight: 200;
+  color:white;
+  align-items: center;
+  justify-content: space-between;
+  
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-/*import Card from "./componentes/Card";*/
+import ImgInicio from './componentes/ImgInicio/ImgInicio';
 import Botones from './componentes/Botones/Botones';
 import NavBar from './componentes/Navbar/NavBar';
 /*import Saludo from './componentes/Itemlistcontainer/ItemsGreeting';*/
@@ -9,36 +9,23 @@ import Flex from './componentes/Flex/Flex';
 /*import ItemCount from './componentes/contador/ItemCount';*/
 import ItemsListContainer from './componentes/ItemsListContainer/ItemsListContainer';
 import { Bboxicons } from 'boxicons';
-import Titulos from './componentes/Titulos/Titulos';
+import Routes from './Navegacion/Routes';
+import Venta from './Pages/Venta';
+import Inicio from './Pages/Inicio';
 
+/*const  App = () => <Routes />*/
 
-  function App() {
-    
-    
-    
-
-    function comprado() {
-      alert("Usted ha adquirido el producto")
-    };
-
-  
-
-    return (
-
-    
-          <div className="App">
-              <NavBar/>
-              <Titulos/>
-              
-              <ItemsListContainer/>
-          <div/>
+function App () {
+  return(
+    <div>
+      <div>
+       <NavBar />
+       <ImgInicio />
       </div>
-        
-       
-         
       
-      
-    );
-  }
-
+    </div>  
+  )
+  
+}
+ 
   export default App;

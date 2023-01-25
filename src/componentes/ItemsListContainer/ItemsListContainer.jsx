@@ -7,18 +7,18 @@ import {useState, useEffect } from "react";
 
 
 function ItemListContainer(){
-    return(      
-        
-        
-
-            
-            <Flex>
-                <Card  img="./imagenes/i1.PNG" Nombre="MIEL 100% PURA" precio="$ 500" detail="organica" />
-                <Card img="./imagenes/i2.jpg"Nombre="JALEA" precio="$ 700" detail="organica" />
-                <Card img="./imagenes/propoleo.jpg" Nombre="PROPOLEO" precio="$ 500" detail="organica" />
-            </Flex>
-           
-
+    return(
+    <>
+    
+    <div>
+        <Flex>
+        <h1 className="title">PRODUCTOS</h1>
+         <Card  img="./imagenes/i1.PNG" Nombre="MIEL 100% PURA" precio="$ 500" detail="organica" />
+         <Card img="./imagenes/i2.jpg"Nombre="JALEA" precio="$ 700" detail="organica" />
+         <Card img="./imagenes/propoleo.jpg" Nombre="PROPOLEO" precio="$ 500" detail="organica" />
+        </Flex>
+    </div>
+    </>
     )
 }
 export default ItemListContainer;
