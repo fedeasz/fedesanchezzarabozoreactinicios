@@ -12,6 +12,7 @@ import Inicio from "../Pages/Inicio";
 
 
 export default () => (
+    
     <BrowserRouter>
     <Routes>
         <Route path="/" element= {<Inicio/>} />

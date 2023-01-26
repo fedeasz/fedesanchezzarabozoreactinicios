@@ -13,14 +13,14 @@ import Routes from './Navegacion/Routes';
 import Venta from './Pages/Venta';
 import Inicio from './Pages/Inicio';
 
-/*const  App = () => <Routes />*/
+
 
 function App () {
   return(
     <div>
       <div>
        <NavBar />
-       <ImgInicio />
+       
       </div>
       
     </div>  

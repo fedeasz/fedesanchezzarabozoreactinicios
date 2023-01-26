@@ -21,9 +21,6 @@ function NavBar(props){
                     <Route path="/" element= {<Inicio/>} />
                     <Route path="/Productos Oraganicos" element= {<Venta/>} />
                     <Route path="/Productos Oraganicos" element= {<Venta/>} />
-                   
-
-
                 </Routes>
             </BrowserRouter>
            
