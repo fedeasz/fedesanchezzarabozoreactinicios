@@ -1,8 +1,7 @@
 import React from "react";
+import NavItem from "./NavItem";
 import "./Nav.css";
-import { BrowserRouter , Route , Routes} from "react-router-dom";
-import Inicio from "../../Pages/Inicio";
-import Venta from "../../Pages/Venta";
+import { Link } from "react-router-dom";
 
 
 
@@ -10,24 +9,33 @@ import Venta from "../../Pages/Venta";
 
 
 
-function NavBar(props){
+
+
+function NavBar (props){
+    const Links = [
+        {title: "ORGANICOS", url:"/ORGANICOS"},
+        {title: "INDUSTRIALIZADOS", url:"/INDUSTRIALIZADOS"},
+    ]
+
+
+
     return (
-        <nav >
+        <nav className="navbar" >
             <div className="logo">
                 <img src="./imagenes/logo page.jpg" alt=""/>
             </div>
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/" element= {<Inicio/>} />
-                    <Route path="/Productos Oraganicos" element= {<Venta/>} />
-                    <Route path="/Productos Oraganicos" element= {<Venta/>} />
-                </Routes>
-            </BrowserRouter>
-           
-            <div className="cart">
-                <box-icon name= "cart"></box-icon>
+            <ul>
+                <NavItem href="/"></NavItem>
+                <Link to="/ORGANICOS">ORGNICOS</Link>
+                <Link to="/INDUSTRIALIZADOS">INDUSTRIALIZADOS</Link>
+                <Link to="/Cart">Cart</Link>
                 <span className="item__Total">0</span>
-            </div>
+            </ul>
+            
+           
+            
+                
+            
         </nav>
         
     ); 
@@ -35,3 +43,10 @@ function NavBar(props){
 
 export default NavBar;
 
+/*<BrowserRouter>
+                <Routes>
+                    <Route path="/" element= {<Inicio/>} />
+                    <Route path="/Productos Oraganicos" element= {<Venta/>} />
+                    <Route path="/Productos Industrializados" element= {<Venta/>} />
+                </Routes>
+            </BrowserRouter>*/

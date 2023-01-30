@@ -1,4 +1,4 @@
-import { BrowserRouter , Route , Routes } from "react-router-dom";
+/*import { BrowserRouter , Route , Routes } from "react-router-dom";
 import Venta from "../Pages/Venta";
 import Inicio from "../Pages/Inicio";
 
@@ -11,16 +11,16 @@ import Inicio from "../Pages/Inicio";
 
 
 
-export default () => (
+/*export default  () => (
     
     <BrowserRouter>
-    <Routes>
-        <Route path="/" element= {<Inicio/>} />
-        <Route path="/PI" element= {<Venta/>} />
-        <Route path="/PO" element= {<div>PRODUCTOS ORGANICOS</div>} />
+        <Routes>
+            <Route path="/" element= {<Inicio/>} />
+            <Route path="/PI" element= {<Venta/>} />
+            <Route path="/PO" element= {<div>PRODUCTOS ORGANICOS</div>} />
 
 
-    </Routes>
+        </Routes>
     </BrowserRouter>
-);
+);*/
 

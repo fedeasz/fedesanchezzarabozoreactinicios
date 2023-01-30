@@ -4,13 +4,10 @@ import "./Botones.css";
 
 function Botones (props){
 
-    //React.useState()
-    let [colorState, setColorState]= React.useState ("black") 
+    /*React.useState()*/
+    let [colorState, setColorState]= React.useState ("black")
 
-    const styleButton = {
-        padding: props.paggding,
-        backgroundColor: colorState,
-    };
+    
 
     function handleClick(evt){
         setColorState = "red";
@@ -18,7 +15,8 @@ function Botones (props){
     }
 
     return(
-        <button onClick= {handleClick} styleButton={styleButton} className ="btn">{props.children}AÑADIR AL CARRITO</button>
+        <button onClick= {handleClick}  className ="btn">{props.children}VER MAS</button>
+        
     );
 
 }

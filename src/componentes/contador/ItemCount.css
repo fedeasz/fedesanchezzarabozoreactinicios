@@ -1,0 +1,19 @@
+button{
+    width: 23px;
+    height: 18px ;
+    font-weight: bold;
+    color:black;
+    border: 2px solid black;
+    margin: 5px;
+    cursor:pointer;
+    text-align: center;
+   
+
+
+
+}
+
+button:hover{
+    background-color: grey;
+}
+

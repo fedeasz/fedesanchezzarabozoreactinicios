@@ -1,25 +1,31 @@
-import Card from "../Card";
+import { useState , useEffect } from "react";
+import obtenerProductos from "../../services/mockServices";
 import Flex from "../Flex/Flex";
+import Item from "./Item.js";
 import "./ItemsListContainer.css";
+ 
 
-import {useState, useEffect } from "react";
+function ItemListContainer() {
+    const [Productos,setProductos] = useState([]);
 
+    /*console.log("viendo itemslist");*/
 
+    useEffect(() => { 
+        obtenerProductos().then((respuesta)=> {
+             setProductos (respuesta);  
+        }).catch(error => alert (error))
+        },[]);
+          
+        return(
+            <Flex>
+                {Productos.map((itemIterado)=>{
+                    return ( <Item id={itemIterado.id} key={itemIterado.id}  item= {itemIterado}/>
+                    );
+                })}
+               
+            </Flex>
 
-function ItemListContainer(){
-    return(
-    <>
-    
-    <div>
-        <Flex>
-        <h1 className="title">PRODUCTOS</h1>
-         <Card  img="./imagenes/i1.PNG" Nombre="MIEL 100% PURA" precio="$ 500" detail="organica" />
-         <Card img="./imagenes/i2.jpg"Nombre="JALEA" precio="$ 700" detail="organica" />
-         <Card img="./imagenes/propoleo.jpg" Nombre="PROPOLEO" precio="$ 500" detail="organica" />
-        </Flex>
-    </div>
-    </>
-    )
+    );
 }
 export default ItemListContainer;
 
