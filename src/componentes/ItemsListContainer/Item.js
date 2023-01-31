@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Botones from "../Botones/Botones";
 
 function Item (props) {
-    const {title, Img, precio,detail} = props.item; 
+    const {title, Img, precio,detalle,categorias} = props.item; 
     return(
   
         <div>
@@ -16,10 +16,13 @@ function Item (props) {
                 <img height="220px" src={Img} alt={title}/>
             </div>
             <div>
+                <h3>{categorias}</h3>
+            </div>
+            <div>
                 <h3> {precio}</h3>
-                <small>{detail}</small>
+                <small>{detalle}</small>
            </div>
-           <Link to="/Detalles/id">
+           <Link to={"/detalles/${id]"}>
                
            </Link>
            <br></br>

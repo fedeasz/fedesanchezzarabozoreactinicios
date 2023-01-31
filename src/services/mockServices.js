@@ -5,21 +5,24 @@ const Productos = [
     "Precio": "$900",
     "Stock": 100,
     "Img": "../imagenes/i1.PNG" ,
-    "Detalle": "DUY"
+    "Detalle": "Envase Plastico",
+    "Categorias":"Organico"
   }, {
     "id": 2,
     "Nombre": "Jalea",
     "Precio": "$700",
     "Stock": 185,
     "Img": "../imagenes/i2.jpg",
-    "Detalle": "0PWQ3KZ"
+    "Detalle": "Envase vidrio",
+    "Categorias":"Organico"
   }, {
     "id": 3,
     "Nombre": "Propoleo",
     "Precio": "$600",
     "Stock": 154,
     "Img": "../imagenes/propoleo.jpg",
-    "Detalle": "051H0AY"
+    "Detalle": "Bolsa plastica",
+    "Categorias":"Organico"
   },
 ];
 
@@ -41,4 +44,30 @@ const obtenerProductos = () => {
     }) ;   
 };
 
+const getcosas = (idURL) => {
+  return new Promise((resolve , reject)=> {
+    const reqItem = Productos.find((Item)=>
+    {
+      return Item.id === parseInt(idURL);
+    });
+
+    setTimeout(()=> {
+      if(reqItem) resolve(reqItem);
+      else reject("No se encontro el producto");
+      },2000);
+    });
+  }
+
+  const getcosasByCategorias = (categoriaURL) => {
+    return new Promise((resolve, reject) => {
+      let reqItems=Productos.filter((item)=>item.categoria === categoriaURL);
+      setTimeout(() => {
+        resolve(reqItems);
+      }, 2000);
+
+    });
+  } ;
+
 export default obtenerProductos;
+
+export { getcosas, getcosasByCategorias};

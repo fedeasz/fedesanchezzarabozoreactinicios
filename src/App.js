@@ -8,13 +8,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import ItemCount from './componentes/contador/ItemCount';
 import ItemListContainer from './componentes/ItemsListContainer/ItemsListContainer';
-
-/*import { Bboxicons } from 'Bboxicons';*/
-
-/*import Venta from './Pages/Venta';
-import Inicio from './Pages/Inicio';*/
-
-
+import ItemDetailContainer from './componentes/ItemsListContainer/ItemDetailConteiner';
+import NotFound from './Pages/PagNOT';
 
 
 function App () {
@@ -40,9 +35,9 @@ function App () {
           </div>
             <Routes>
               <Route path="/" element= {<ItemListContainer/>} />
-              <Route path="/ORGANICOS" element= {<ItemListContainer/>} />
-              <Route path="/INDUSTRIAlIZADOS" element= {<ItemListContainer/>} />
-              <Route path="*" element= {<h2>Pagina no encontrada</h2>} />
+              <Route path="/detalle/:itemid" element= {<ItemDetailContainer/>} />
+              <Route path="PI" element= {<ItemListContainer/>} />
+              <Route path="*" element= {<h2><NotFound/></h2>} />
             </Routes>
         </BrowserRouter>
         </nav> 
@@ -52,7 +47,7 @@ function App () {
         
       </div>
       <div>
-        <ItemCount/>
+       
       </div>
       <footer>
         PErritos
@@ -62,3 +57,5 @@ function App () {
 }
  
 export default App;
+/*"/Detalle/:itemid"
+"/categoria/:categoriaid"*/
