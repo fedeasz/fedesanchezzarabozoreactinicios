@@ -6,12 +6,12 @@ import ItemDetail from "./ItemDetail";
 
 
 function ItemDetailContainer(){
-    const[cosas , setcosas] = useState({title : "LOADING..."});
+    const[cosas , setcosas] = useState({Title : "LOADING..."});
 
     let params = useParams ();
 
     useEffect( () =>{
-        getcosas(params.itemid)
+        getcosas(params.Itemid)
             .then((respuesta)=>{
         setcosas(respuesta);
         })
@@ -20,10 +20,11 @@ function ItemDetailContainer(){
     
     return(
         <ItemDetail
-        title={cosas.title}
-        img={cosas.img}
-        detalle={cosas.detalle}
-        precio={cosas.precio} />
+        title={cosas.Nombre}
+        img={cosas.Img} 
+        detalle={cosas.Detalle}
+        precio={cosas.Precio}
+        />
     );
 }
  export default ItemDetailContainer;

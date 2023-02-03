@@ -1,34 +1,29 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Form, Link } from "react-router-dom";
+import "../Botones/Botones.css";
 
 
-import Botones from "../Botones/Botones";
+
 
 function Item (props) {
-    const {title, Img, precio,detalle,categorias} = props.item; 
+    const { Nombre, Img, Precio,Detalle,Categorias, id} = props.item; 
     return(
   
         <div>
             <div>
-                <h3>{title}</h3>
+                <img height="220px" src={Img} alt={Nombre}/>
             </div>
             <div>
-                <img height="220px" src={Img} alt={title}/>
+                <h3>{Nombre}</h3>
+                <h1>{Detalle}</h1>
             </div>
-            <div>
-                <h3>{categorias}</h3>
-            </div>
-            <div>
-                <h3> {precio}</h3>
-                <small>{detalle}</small>
-           </div>
-           <Link to={"/detalles/${id]"}>
-               
-           </Link>
-           <br></br>
-           <Botones/>
-        </div>
- 
+
+            <Link to={`/detalle/${id}`}>
+               <button className="btn">VER MAS</button>
+            </Link>
+            <br></br>
+        </div>    
+
     );
 }
 export default Item;

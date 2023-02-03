@@ -1,21 +1,28 @@
 import React from "react";
 import ItemCount from "../contador/ItemCount";
+import { Form, Link } from "react-router-dom";
 
 
-function ItemDetail ({ title, img, detalle, precio, categorias}){
+
+
+function ItemDetail ({ Nombre, Img, Detalle, Precio, Categorias,id}){
     
     return(
         <div>
             <div>
-                <img src="" alt="">{img}</img>
+            <img height="220px" src={Img} alt={Nombre}/>
             </div>
             <div>
-                <h1>{title}</h1>
-                <h4>$ {precio}</h4>
-                <p>{detalle}</p>
-                <p>{categorias}</p>
+                <h1>{Nombre}</h1>
+                <h4>$ {Precio}</h4>
+                <h4>{Detalle}</h4>
+                <h4>{Categorias}</h4>
+
+                
             </div>
+            
             <ItemCount/>
+            id={id}
         </div>
     )
 }

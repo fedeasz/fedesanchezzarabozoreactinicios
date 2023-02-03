@@ -4,14 +4,7 @@ import {useState} from 'react';
 
 
 
-/*function ItemCount({texto,BotonSuma, manejarClic}){
-  return(
-    <button className={BotonSuma ? "boton-click" : "boton-restar"} 
-      onClick={manejarClic}>
-      {texto}
-    </button>
-  )
-}*/
+
 
 function ItemCount(props) {
 
@@ -25,9 +18,15 @@ function ItemCount(props) {
     }
   return (
     <div className="contador">
-        <button disabled={ count ===props.stock} onClick={handleAdd}>+</button>
-        <p>{count}</p>
-        <button disabled={ count=== 0} onClick={handleSubctrac}>-</button>
+      <small>Agregar al Carrito</small>
+      <div>
+        <button className="btn1" onClick={handleSubctrac}>-</button>
+        <span>{count}</span>
+        <button className="btn1" onClick={handleAdd}>+</button>
+      </div>
+      <div>
+        <button>Agregar al Carrtio</button>
+      </div>
     </div>
   )
 }

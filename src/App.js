@@ -6,7 +6,7 @@ import NavBar from './componentes/Navbar/NavBar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
-import ItemCount from './componentes/contador/ItemCount';
+
 import ItemListContainer from './componentes/ItemsListContainer/ItemsListContainer';
 import ItemDetailContainer from './componentes/ItemsListContainer/ItemDetailConteiner';
 import NotFound from './Pages/PagNOT';
@@ -35,7 +35,7 @@ function App () {
           </div>
             <Routes>
               <Route path="/" element= {<ItemListContainer/>} />
-              <Route path="/detalle/:itemid" element= {<ItemDetailContainer/>} />
+              <Route path="/detalle/:Itemid" element= {<ItemDetailContainer/>} />
               <Route path="PI" element= {<ItemListContainer/>} />
               <Route path="*" element= {<h2><NotFound/></h2>} />
             </Routes>

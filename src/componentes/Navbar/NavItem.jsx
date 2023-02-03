@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
-const NavItem = ({href,children}) => {
+const NavItem = ({to,children}) => {
     return(
         <li>
-            <Link to={href}>{children}</Link>
+            <Link to={to}>{children}</Link>
         </li>
     )
 }

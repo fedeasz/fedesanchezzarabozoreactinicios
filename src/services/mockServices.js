@@ -7,7 +7,7 @@ const Productos = [
     "Img": "../imagenes/i1.PNG" ,
     "Detalle": "Envase Plastico",
     "Categorias":"Organico"
-  }, {
+  }, { 
     "id": 2,
     "Nombre": "Jalea",
     "Precio": "$700",
@@ -58,9 +58,9 @@ const getcosas = (idURL) => {
     });
   }
 
-  const getcosasByCategorias = (categoriaURL) => {
+  const getcosasByCategorias = (CategoriasURL) => {
     return new Promise((resolve, reject) => {
-      let reqItems=Productos.filter((item)=>item.categoria === categoriaURL);
+      let reqItems=Productos.filter((Item)=>Item.Categorias === CategoriasURL);
       setTimeout(() => {
         resolve(reqItems);
       }, 2000);
