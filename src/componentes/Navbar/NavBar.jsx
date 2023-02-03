@@ -2,6 +2,7 @@ import React from "react";
 import NavItem from "./NavItem";
 import "./Nav.css";
 import { Link } from "react-router-dom";
+import Botones from "../Botones/Botones";
 
 
 
@@ -12,10 +13,13 @@ import { Link } from "react-router-dom";
 
 
 function NavBar (props){
-    
-
-
-
+    function handleSubmit(evt){
+        evt.preventDefault();
+        let user = evt.target.element[0].value;
+        props.onLogin(user);
+    }
+ 
+   
     return (
         <nav className="navbar" >
             <div className="logo">
@@ -25,8 +29,15 @@ function NavBar (props){
                 
                 <Link to="/detalle">ORGANICOS</Link>
                 <Link to="/INDUSTRIALIZADOS">INDUSTRIALIZADOS</Link>
-                <Link to="/Cart">Cart</Link>
-                <span className="item__Total">0</span>
+                <Link to="/Cart">Cart
+                    <span>carrito</span>
+                </Link>
+                
+                <Botones onClick={props.onLogout}>Log Out </Botones>
+                <form onSubmit={handleSubmit}>
+                    Iniciar Sesion
+                    <input name="user" />
+                </form>
             </ul>
             
            

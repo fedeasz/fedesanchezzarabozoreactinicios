@@ -5,7 +5,7 @@ const Productos = [
     "Precio": "$900",
     "Stock": 100,
     "Img": "../imagenes/i1.PNG" ,
-    "Detalle": "Envase Plastico",
+    "Detalle": "Envase Plastico por 1KG",
     "Categorias":"Organico"
   }, { 
     "id": 2,
@@ -13,7 +13,7 @@ const Productos = [
     "Precio": "$700",
     "Stock": 185,
     "Img": "../imagenes/i2.jpg",
-    "Detalle": "Envase vidrio",
+    "Detalle": "Envase vidrio por 1KG",
     "Categorias":"Organico"
   }, {
     "id": 3,
@@ -21,7 +21,7 @@ const Productos = [
     "Precio": "$600",
     "Stock": 154,
     "Img": "../imagenes/propoleo.jpg",
-    "Detalle": "Bolsa plastica",
+    "Detalle": "Bolsa Plastica por 1KG",
     "Categorias":"Organico"
   },
 ];
@@ -40,7 +40,7 @@ const obtenerProductos = () => {
                 reject("Usuario no encontrado");
             else
                 resolve(Productos);
-        },3000);
+        },2000);
     }) ;   
 };
 

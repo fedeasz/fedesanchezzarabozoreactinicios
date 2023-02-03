@@ -9,7 +9,7 @@ export default function Botones (props){
 
 
     return(
-        <button onClick= {props.click}  className ="btn">{props.children}VER MAS</button>
+        <button onClick= {props.onclick}  className ="btn">{props.children}</button>
         
     );
 

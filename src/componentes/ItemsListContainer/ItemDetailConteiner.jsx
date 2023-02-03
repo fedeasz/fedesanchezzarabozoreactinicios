@@ -16,14 +16,15 @@ function ItemDetailContainer(){
         setcosas(respuesta);
         })
         .catch((error)=> alert(error));
-    },[]);
+    }, []);
     
     return(
         <ItemDetail
-        title={cosas.Nombre}
-        img={cosas.Img} 
-        detalle={cosas.Detalle}
-        precio={cosas.Precio}
+         Nombre={cosas.Nombre}
+         Img={cosas.Img} 
+         Detalle={cosas.Detalle}
+         Precio={cosas.Precio}
+         Categorias={cosas.Categorias}
         />
     );
 }

@@ -1,5 +1,6 @@
 import React from "react";
-import { Form, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Botones from "../Botones/Botones";
 import "../Botones/Botones.css";
 
 
@@ -15,11 +16,10 @@ function Item (props) {
             </div>
             <div>
                 <h3>{Nombre}</h3>
-                <h1>{Detalle}</h1>
             </div>
 
             <Link to={`/detalle/${id}`}>
-               <button className="btn">VER MAS</button>
+               <Botones className="btn">VER MAS</Botones>
             </Link>
             <br></br>
         </div>    

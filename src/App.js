@@ -13,14 +13,19 @@ import NotFound from './Pages/PagNOT';
 
 
 function App () {
- 
+  function logoutSession (){
+    console.log("saliste");
+  }
+  function logInSession (username){
+    alert(`Bienvenido:${username}`);
+  }
 
   return(
     <div className='App'>
       <header>
         <nav>
         <BrowserRouter>  
-          <NavBar />
+          <NavBar  onLogin={logInSession} onLogout={logoutSession}/>
           <h1 className='h1'>Bienvenidos a  Honey Bee</h1>
           <div className='mosaico'>
             <img  src="../imagenes/logo page.jpg" alt="LOGO"/>
