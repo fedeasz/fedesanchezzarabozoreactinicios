@@ -2,23 +2,15 @@ import React from "react";
 import NavItem from "./NavItem";
 import "./Nav.css";
 import { Link } from "react-router-dom";
-import Botones from "../Botones/Botones";
+import Botones from "../Botones/Botones";   
 
 
-
-
-
-
-
-
-
-function NavBar (props){
+function NavBar (props) {
     function handleSubmit(evt){
         evt.preventDefault();
-        let user = evt.target.element[0].value;
+        let user = evt.target.elements[0].value;
         props.onLogin(user);
     }
- 
    
     return (
         <nav className="navbar" >
@@ -36,7 +28,7 @@ function NavBar (props){
                 <Botones onClick={props.onLogout}>Log Out </Botones>
                 <form onSubmit={handleSubmit}>
                     Iniciar Sesion
-                    <input name="user" />
+                    <input name="user"></input>
                 </form>
             </ul>
             
