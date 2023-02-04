@@ -1,17 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import {getcosas} from "../../services/mockServices";
 import ItemDetail from "./ItemDetail";
+import { cartContext } from "../../storage/cartContext";
 
 
 function ItemDetailContainer(){
-    const[cosas , setcosas] = useState({Title : "LOADING..."});
+    const[cosas , setcosas] = useState({title : "LOADING..."});
 
     let params = useParams ();
 
-    useEffect( () =>{
-        getcosas(params.Itemid)
+    const {AddToCart} = useContext(cartContext);
+
+    function handleAddToCart (count){
+        AddToCart({...cosas,count: count});
+       
+    }
+    
+
+    useEffect (() =>{
+        getcosas(params.Itemid) 
             .then((respuesta)=>{
         setcosas(respuesta);
         })
@@ -20,6 +29,8 @@ function ItemDetailContainer(){
     
     return(
         <ItemDetail
+         onAddToCart={handleAddToCart}
+         title={cosas.title}
          Nombre={cosas.Nombre}
          Img={cosas.Img} 
          Detalle={cosas.Detalle}

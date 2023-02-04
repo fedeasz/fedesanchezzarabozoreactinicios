@@ -8,8 +8,7 @@ import ItemCount from "../contador/ItemCount";
 function ItemDetail ({ Nombre, Img, Detalle, Precio, Categorias,id}){
     const [countIncart, setCountInCart]= useState(0);
 
-    function handleAddtoCart (count) {
-        console.log(`agregaste al caito ${count} unidades del producto ${Nombre}`)
+    function handleAddToCart (count) {
         setCountInCart(count);
     }
     
@@ -25,7 +24,7 @@ function ItemDetail ({ Nombre, Img, Detalle, Precio, Categorias,id}){
                 <h4>{Categorias}</h4>              
             </div>
             {countIncart === 0 ?(
-                <ItemCount onAddtoCart={handleAddtoCart}/>    
+                <ItemCount onAddToCart={handleAddToCart}/>    
             ) : (
             <a href="/Cart">
                 <button>Ir al Carrito</button>
